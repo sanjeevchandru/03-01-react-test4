@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React test 4</title>
+</head>
+
+<body>
+    <pre>
+       1. What is the output of below code?
+        import { useState } from 'react';  export default function Counter() { 
+              const [counter, setCounter] = useState(5);    return ( <>     
+                < span>{counter}< /span>       < button onClick={ ( ) => {      
+                       setCounter(counter + 5);         setCounter(counter + 5);    
+                            alert(counter);         setCounter(counter + 5);       
+                              setCounter(counter + 5);       }}>Increment< /button>     </>   ) } 
+                              
+        output:5   alert:5  when to click alert btn=>ok,then count value is increse ,the dom is update
+        ex:   10   alert :10 
+                    <hr>
+        2.What will be the output of the below code if the button is clicked:
+
+        function App() { 
+         const [count, setCount] = useState(0); 
+         useEffect(() => {
+         console.log("Component rendered successfully");   }, []); 
+         return (
+         < div> 
+           	< button onClick={ ( ) => setCount(count + 1)}>Click me< /button>
+           	< p>You clicked {count} times< /p>
+     	< /div>   ); }      
+        
+        output:You clicked 14 times    console=>Component rendered successfully (onetime)
+        <hr>
+        3.How do you create forms in React?    
+        React uses forms to allow users to interact with the web page.
+         In React, form data is usually handled by the components.
+          When the data is handled by the components, all the data is
+           stored in the component state. You can control changes by adding
+            event handlers in the onChange attribute and that event handler
+             will be used to update the state of the variable.
+        Ex:< form>
+            < label>Input Value:< /label>
+            < input  type="text"  value={inputValue} onChange={handleChange} />
+            < /form>
+            < p>Input Value: {inputValue}< /p> 
+            <hr>
+        4. Explain lifecycle methods.       
+        These methods allow you to control the component's behavior
+         and perform specific actions at different stages of its lifecycle.
+         A component's lifecycle has three main phases: the Mounting Phase,
+          the Updating Phase, and the Unmounting Phase.    
+<hr>
+        5.Can web browsers read JSX directly?  
+        JSX isn't directly supported by browsers, requiring conversion
+         by tools like Babel to transform JSX into valid JavaScript.
+          This transpilation ensures browsers can interpret and execute
+           the JSX-embedded code in React applications.
+<hr>
+        6.How Do You Handle Forms in React?
+        In React, form data is usually handled by the components. 
+        When the data is handled by the components, all the data is
+         stored in the component state. You can control changes by
+          adding event handlers in the onChange attribute.
+        <hr>
+        7.What is virtual dom in the react?    
+        Instead of manipulating the browser's DOM directly,
+         React creates a virtual DOM in memory, where it does 
+         all the necessary manipulating, before making the changes 
+         in the browser DOM. React only changes what needs to be changed!
+         <hr>
+        8.In React, Why Is There a Need for Using Keys in Lists?
+        Keys help React identify which items have changed (added/removed/re-ordered).
+         To give a unique identity to every element inside the array, a key is required.
+
+        To better understand this, let  s refactor the code snippet we saw earlier, 
+        to now include keys.
+
+        <hr>
+        9.What Is the Difference Between State and Props in React? 
+        Props are used to pass data from a parent component to a child component,
+         while state is used to manage data within a component. Props are immutable
+          and cannot be changed within a component, while state is mutable and can
+         be updated using the setState function.
+    </pre>
+
+</body>
+</html>
